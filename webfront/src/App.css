@@ -1,0 +1,15 @@
+#App {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.light_mode{
+  background-color: #f4f4f4;
+  color: #1b1b1b;
+}
+
+.dark_mode {
+  background-color: #1b1b1b;
+  color: #f4f4f4;
+}
