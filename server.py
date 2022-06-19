@@ -10,7 +10,7 @@ app = Flask(__name__, static_url_path='/', static_folder='build')
 def recommend_tour():
     data = request.data.decode('utf-8')
     print(data)
-    return make_response(tb.getans() + ' 어떠신가요?')
+    return make_response(tb.getans(data))
 
 @app.route('/')
 def index_html(): # 루트에서는 index.html을 response로 보냄
