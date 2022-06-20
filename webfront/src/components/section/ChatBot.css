@@ -1,0 +1,23 @@
+article.chatbot {
+    vertical-align: bottom;
+    height: inherit;
+}
+
+.chatScreen {
+    height: 82%;
+}
+
+.textInputBox {
+    height: 18%;
+}
+
+.textInputBox > * {
+    width: 100%;
+    height: 100%;
+}
+
+.textInputBox > div > * {
+    width: 100%;
+    height: 50%;
+    font-size: 18px;
+}
