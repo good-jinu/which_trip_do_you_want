@@ -3,12 +3,31 @@ article.chatbot {
     height: inherit;
 }
 
+.chatwrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    min-height: 0px;
+    height: 66vh;
+}
+
 .chatScreen {
-    height: 82%;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.chatScreen > * {
+    padding: 2mm 0 2mm 2mm;
+}
+
+.chatScreen > div > * {
+    padding: 2mm 0 2mm 2mm;
 }
 
 .textInputBox {
-    height: 18%;
+    height: 6vh;
 }
 
 .textInputBox > * {
@@ -18,6 +37,6 @@ article.chatbot {
 
 .textInputBox > div > * {
     width: 100%;
-    height: 50%;
-    font-size: 18px;
+    height: 95%;
+    font-size: 16px;
 }

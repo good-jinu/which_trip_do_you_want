@@ -2,3 +2,29 @@
     min-height: 25vh;
     overflow: auto;
 }
+
+#header h1 {
+    text-align: center;
+}
+
+#darkmode_btn {
+    border: unset;
+    border-radius: 20px;
+    padding: 12px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 2px 4px;
+    cursor: pointer;
+}
+
+.light_mode #darkmode_btn {
+    background-color: #d5d5ef;
+    color: #0a0a0a;
+}
+
+.dark_mode #darkmode_btn {
+    background-color: #150505;
+    color: #c7C7c7;
+}

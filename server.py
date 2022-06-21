@@ -1,4 +1,4 @@
-from flask import Flask, request, make_response
+from flask import Flask, request, make_response, jsonify
 import os
 from QAlib import example0
 
@@ -10,7 +10,7 @@ app = Flask(__name__, static_url_path='/', static_folder='build')
 def recommend_tour():
     data = request.data.decode('utf-8')
     print(data)
-    return make_response(tb.getans(data))
+    return make_response(jsonify(tb.getans(data)))
 
 @app.route('/')
 def index_html(): # 루트에서는 index.html을 response로 보냄

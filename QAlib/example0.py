@@ -8,9 +8,9 @@ class TourBot:
     def __init__(self):
         dir_path = os.path.dirname(os.path.realpath(__file__))
         self.__okt = Okt()
-        self._region_lst = ['부산','서울','제주도','제주','인천','대구','대전']
         with open(f'{dir_path}/Datasets/word_count_rank.pickle', 'rb') as handle:
             self.__word_rank = pickle.load(handle)
+        self._region_lst = ['제주도'] + list(self.__word_rank.keys())
     def getans(self, query_data = ''):
         region_filter = []
         for i in self._region_lst:
@@ -38,6 +38,8 @@ class TourBot:
                     maxpool_lst[(i, j)] = maxpool_tmp
         ans = sorted(list(maxpool_lst.items()), key=lambda x: x[1])
         if ans:
-            return f"{ans[0][0][0]}에 {ans[0][0][1]} 어떤가요?"
+            if len(ans)>5:
+                ans = ans[:5]
+            return [f"{i[0][0]}에 {i[0][1]} 어떤가요?" for i in ans]
         else:
-            return '죄송합니다. 적합한 관광지를 찾지 못했어요.'
+            return ['죄송합니다. 적합한 관광지를 찾지 못했어요.']
