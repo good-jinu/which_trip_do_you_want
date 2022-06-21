@@ -1,8 +1,8 @@
 from flask import Flask, request, make_response, jsonify
 import os
-from QAlib import example0
+from QAlib import tourbot
 
-tb = example0.TourBot()
+tb = tourbot.TourBot()
 
 app = Flask(__name__, static_url_path='/', static_folder='build')
 
