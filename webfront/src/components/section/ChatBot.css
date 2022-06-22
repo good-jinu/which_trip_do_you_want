@@ -18,12 +18,31 @@ article.chatbot {
     overflow-y: auto;
 }
 
-.chatScreen > * {
-    padding: 2mm 0 2mm 2mm;
+.user_comment{
+    padding: 2mm;
+    margin: 5mm 1mm 2mm 40%;
+    border-radius: 10px 10px 0 10px;
 }
 
-.chatScreen > div > * {
-    padding: 2mm 0 2mm 2mm;
+.bot_comment {
+    padding: 2mm;
+    margin: 5mm 40% 2mm 1mm;
+    border-radius: 10px 10px 10px 0;
+}
+
+.light_mode #section .user_comment,.light_mode #section .bot_comment,.light_mode #section .bot_comment * {
+    background-color: #efef00;
+    text-decoration: none;
+}
+
+.dark_mode #section .user_comment,.dark_mode #section .bot_comment,.dark_mode #section .bot_comment * {
+    background-color: #4f4f00;
+    text-decoration: none;
+}
+
+.bot_comment p{
+    margin: 0;
+    padding: 2mm 0;
 }
 
 .textInputBox {

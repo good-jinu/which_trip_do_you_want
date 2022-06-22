@@ -51,15 +51,30 @@ function ChatBot(props) {
                         b.push(item[1][i]);
                     }
                     return (
-                        <div key={"onequery"+index}>
-                            {a}
-                            <div>
-                                {b.map((item2, index2) => (
-                                    <div key={"mulans"+index2}>{item2}</div>
-                                ))}
+                        <div>
+                            <div key={"onequery"+index} className="user_comment">
+                                {a}
+                            </div>
+                            <div className="bot_comment">
+                                {b.map((item2, index2) => {
+                                    let spl = item2.split(', ');
+                                    if(spl.length == 1) {
+                                        return (
+                                            <p key = {"mulans"+index2}>{item2}</p>
+                                        );
+                                    }
+                                    return (
+                                    <a href={"https://map.naver.com/v5/search/"+encodeURIComponent(spl[1])}
+                                    target="_blank" rel="noopener noreferrer">
+                                        <p key={"mulans"+index2}>{item2}</p>
+                                    </a>
+                                    );
+                                    }
+                                )
+                                }
                             </div>
                         </div>
-                    );
+                        );
                 })}
             </div>
             </div>
