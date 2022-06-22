@@ -64,7 +64,7 @@ function ChatBot(props) {
                                         );
                                     }
                                     return (
-                                    <a href={"https://map.naver.com/v5/search/"+encodeURIComponent(spl[1])}
+                                    <a href={"https://map.naver.com/v5/search/"+encodeURIComponent(item2)}
                                     target="_blank" rel="noopener noreferrer">
                                         <p key={"mulans"+index2}>{item2}</p>
                                     </a>

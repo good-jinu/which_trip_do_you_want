@@ -30,7 +30,7 @@ class TourBot:
                         score_tmp *= self.__word_rank[i][j][t]
                     except:
                         #단어가 존재하지 않는다면 score값을 증가시켜서 비용증가
-                        score_tmp *= 1.5
+                        score_tmp *= 2.0
                 #score 값이 1.0보다 작으면 score리스트에 값 추가
                 if score_tmp < 1.0:
                     score_dct[(i, j)] = score_tmp
