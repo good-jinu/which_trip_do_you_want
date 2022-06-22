@@ -30,11 +30,12 @@ class TourBot:
                 maxpool_tmp = 1
                 for t in tokens:
                     try:
-                        maxpool_tmp *= min(400, self.__word_rank[i][j][t])
+                        maxpool_tmp *= max(2, self.__word_rank[i][j][t] * 100)
                     except:
-                        maxpool_tmp *= 400
-                maxpool_lst[(i, j)] = maxpool_tmp
-        ans = sorted(list(maxpool_lst.items()), key=lambda x: x[1])
+                        maxpool_tmp *= 2
+                if maxpool_tmp > 2 ** len(tokens):
+                    maxpool_lst[(i, j)] = maxpool_tmp
+        ans = sorted(list(maxpool_lst.items()), key=lambda x: x[1], reversed=True)
         if ans:
             if len(ans)>5:
                 ans = ans[:5]
