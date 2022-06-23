@@ -4,6 +4,10 @@
   overflow: hidden;
 }
 
+a {
+  color: inherit;
+}
+
 .light_mode{
   background-color: #f4f4f4;
   color: #1b1b1b;

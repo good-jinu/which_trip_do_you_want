@@ -6,6 +6,12 @@ tb = tourbot.TourBot()
 
 app = Flask(__name__, static_url_path='/', static_folder='build')
 
+@app.route('/req_r', methods=['POST'])
+def recommend_tour_random():
+    data = request.data.decode('utf-8')
+    print('random: ',data)
+    return make_response(jsonify(tb.getans(data, True)))
+
 @app.route('/req', methods=['POST'])
 def recommend_tour():
     data = request.data.decode('utf-8')

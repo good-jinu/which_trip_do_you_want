@@ -7,6 +7,13 @@
     text-align: center;
 }
 
+#header nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
 #darkmode_btn {
     border: unset;
     border-radius: 20px;
@@ -27,4 +34,8 @@
 .dark_mode #darkmode_btn {
     background-color: #150505;
     color: #c7C7c7;
+}
+
+.dark_mode img.mark {
+    filter: invert(40%);
 }

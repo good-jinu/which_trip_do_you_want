@@ -31,7 +31,12 @@ class Header extends React.Component {
     return (
         <header id="header">
             <h1>관광지 추천 봇</h1>
-            <button onClick={this.handle_thememode} id="darkmode_btn">{this.state.btn_name}</button>
+            <nav>
+              <button onClick={this.handle_thememode} id="darkmode_btn">{this.state.btn_name}</button>
+              <a href="https://github.com/good-jinu/which_trip_do_you_want" target="_blank" rel="noopener noreferrer">
+                <img src="/GitHub-Mark-32px.png" className="mark" alt="github"/>
+              </a>
+            </nav>
         </header>
     );
   }
